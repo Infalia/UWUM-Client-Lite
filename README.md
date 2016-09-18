@@ -92,6 +92,8 @@ e.g. https://wegovnow.infalia.com/oauth2_callback.php
 
 ## Install
 
+Clone this repo and install dependencies 
+
 Via Composer
 
 ``` bash
