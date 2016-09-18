@@ -1,6 +1,8 @@
 # UWUM-Client-Lite
 A simplified PHP client for Unified [WeGovNow](http://wegovnow.eu) User Management (UWUM) oAuth2.0
 
+
+[![Issues](https://img.shields.io/github/issues/Infalia/UWUM-Client-Lite.svg?style=flat-square)](https://github.com/infalia/UWUM-Client-Lite/issues)
 [![Source Code](http://img.shields.io/badge/source-infalia/UWUM--Client--Lite-blue.svg?style=flat-square)](https://github.com/infalia/UWUM-Client-Lite)
 [![Latest Version](https://img.shields.io/github/release/infalia/UWUM-Client-Lite.svg?style=flat-square)](https://github.com/infalia/UWUM-Client-Lite/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://github.com/infalia/UWUM-Client-Lite/blob/master/LICENSE)
