@@ -44,8 +44,37 @@ The client application service is encrypted via HTTPS.
 
 **4) X.509 certificate for client identification**
 
-i) Create a certificate signing request (CSR) and submit it to the UWUM Certificate Authority to be signed.
-ii) Receive the signed certificate
+i) Create a certificate signing request (CSR) with your details
+
+```
+CN of the certificate signing request (CSR) should be like "wegovnow.infalia.com" (change accordingly)
+```
+
+To create a CSR (given that you are using openssl):
+
+``` bash
+openssl req -out wegovnow.infalia.com-uwum.csr -new -newkey rsa:2048 -nodes -keyout wegovnow.infalia.com-uwum.key
+```
+
+ii) Submit CSR to the UWUM Certificate Authority to be signed
+
+> Please send **only** the .csr file, the .key file should stay your secret
+
+iii) UWUM Certificate Authority will then create an application record in the UWUM testing system for your
+application and verify your client_id. 
+
+> Your client_id is actually the CN declared in the CSR
+
+iv) UWUM Certificate Authority will send over the signed CRT (.crt) file
+
+You need to create a combined .pem file out of the certificate .key file and the certificate .crt file using the following command (as an example):
+
+``` bash 
+cat wegovnow.infalia.com-uwum.crt wegovnow.infalia.com-uwum.key > wegovnow.infalia.com-uwum.pem
+```
+> **Note**
+
+> Please ensure to place the .pem file outside the web directory, so it is not exposed to the public
 
 **5) Inform UWUM Certificate Authority of your callback URL**
 
